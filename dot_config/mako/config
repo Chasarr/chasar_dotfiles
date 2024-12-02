@@ -1,0 +1,55 @@
+default-timeout=7000
+font=Hack Nerd Font 13
+background-color=#2e3440
+border-radius=26
+format=<b>%a :</b> %s\n%b
+border-color=#3b4252
+width=600
+height=110
+
+[urgency=normal]
+
+
+[urgency=high]
+border-color=#d08770
+default-timeout=0
+
+[app-name=Spotify]
+default-timeout=3000
+#invisible=1
+
+[app-name="Window info"]
+width=600
+
+[app-name=blueman summary="DualSense Wireless Controller" body="Connected"]
+on-notify=exec "$HOME/scripts/ps5_batt_disp.sh" battery
+invisible=1
+
+[app-name=blueman summary="DualSense Wireless Controller" body="Disconnected"]
+invisible=1
+
+[summary~="^Screenshot"]
+format=<b>%b</b>
+anchor=center
+default-timeout=1500
+text-alignment=center
+font=Hack Nerd Font 15
+width=300
+height=300
+padding=40,0,40,30
+
+[summary="Screenshot left"]
+output=DVI-D-1
+
+[summary="Screenshot right"]
+output=HDMI-A-2
+
+[summary="Window info"]
+format=<b>%s</b>\n%b
+width=600
+default-timeout=0
+
+[summary="Command finished"]
+format=<b>%s</b>\n%b
+width=216
+default-timeout=0
